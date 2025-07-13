@@ -4,7 +4,7 @@ import axios from "axios";
 import { io } from "socket.io-client";
 import { VisitorTable } from "../components/VisitorTable";
 
-const socket = io("http://localhost:5000", {
+const socket = io("https://visitor-jbk2.onrender.com", {
   transports: ["websocket"], // Ensure full websocket support
   reconnection: true,
 });
