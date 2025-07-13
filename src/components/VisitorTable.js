@@ -1,6 +1,6 @@
 // src/components/VisitorTable.js
 import React from "react";
-
+import GoogleAdsInfoTable from './GoogleAdsInfoTable';
 export const VisitorTable = ({ visitors }) => {
   if (!visitors || visitors.length === 0)
     return (
@@ -174,7 +174,7 @@ const TrackingInfoTable = ({ visitors }) => (
   </table>
 );
 
-const GoogleAdsInfoTable = ({ visitors }) => (
+ GoogleAdsInfoTable = ({ visitors }) => (
   <table className="w-full text-sm text-gray-800 table-fixed border-collapse">
     <thead className="sticky top-0 bg-red-600 text-white">
       <tr>
