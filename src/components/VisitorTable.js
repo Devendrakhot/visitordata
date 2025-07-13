@@ -1,6 +1,6 @@
 // src/components/VisitorTable.js
 import React from "react";
-import GoogleAdsInfoTable from './GoogleAdsInfoTable';
+
 export const VisitorTable = ({ visitors }) => {
   if (!visitors || visitors.length === 0)
     return (
@@ -174,41 +174,41 @@ const TrackingInfoTable = ({ visitors }) => (
   </table>
 );
 
- GoogleAdsInfoTable = ({ visitors }) => (
-  <table className="w-full text-sm text-gray-800 table-fixed border-collapse">
-    <thead className="sticky top-0 bg-red-600 text-white">
-      <tr>
-        <th className="px-4 py-2 w-10">#</th>
-        <th className="px-4 py-2 w-48">Campaign ID</th>
-        <th className="px-4 py-2 w-48">Campaign Name</th>
-        <th className="px-4 py-2 w-48">Ad Group ID</th>
-        <th className="px-4 py-2 w-48">Ad Group Name</th>
-        <th className="px-4 py-2 w-48">Ad ID</th>
-        <th className="px-4 py-2 w-48">Keyword</th>
-        <th className="px-4 py-2 w-48">Match Type</th>
-        <th className="px-4 py-2 w-48">Placement</th>
-        <th className="px-4 py-2 w-48">Placement Type</th>
-        <th className="px-4 py-2 w-48">Ad URL</th>
-        <th className="px-4 py-2 w-48">Ad Domain</th>
-      </tr>
-    </thead>
-    <tbody className="divide-y divide-gray-200">
-      {visitors.map((v, i) => (
-        <tr key={i} className="hover:bg-gray-50">
-          <td className="px-4 py-2">{i + 1}</td>
-          <td className="px-4 py-2">{renderCell(v.campaign_id)}</td>
-          <td className="px-4 py-2">{renderCell(v.campaign_name)}</td>
-          <td className="px-4 py-2">{renderCell(v.adgroup_id)}</td>
-          <td className="px-4 py-2">{renderCell(v.adgroup_name)}</td>
-          <td className="px-4 py-2">{renderCell(v.ad_id)}</td>
-          <td className="px-4 py-2">{renderCell(v.keyword_text)}</td>
-          <td className="px-4 py-2">{renderCell(v.keyword_match_type)}</td>
-          <td className="px-4 py-2">{renderCell(v.placement)}</td>
-          <td className="px-4 py-2">{renderCell(v.placement_type)}</td>
-          <td className="px-4 py-2">{renderCell(v.ad_url)}</td>
-          <td className="px-4 py-2">{renderCell(v.ad_domain)}</td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-);
+// const GoogleAdsInfoTable = ({ visitors }) => (
+//   <table className="w-full text-sm text-gray-800 table-fixed border-collapse">
+//     <thead className="sticky top-0 bg-red-600 text-white">
+//       <tr>
+//         <th className="px-4 py-2 w-10">#</th>
+//         <th className="px-4 py-2 w-48">Campaign ID</th>
+//         <th className="px-4 py-2 w-48">Campaign Name</th>
+//         <th className="px-4 py-2 w-48">Ad Group ID</th>
+//         <th className="px-4 py-2 w-48">Ad Group Name</th>
+//         <th className="px-4 py-2 w-48">Ad ID</th>
+//         <th className="px-4 py-2 w-48">Keyword</th>
+//         <th className="px-4 py-2 w-48">Match Type</th>
+//         <th className="px-4 py-2 w-48">Placement</th>
+//         <th className="px-4 py-2 w-48">Placement Type</th>
+//         <th className="px-4 py-2 w-48">Ad URL</th>
+//         <th className="px-4 py-2 w-48">Ad Domain</th>
+//       </tr>
+//     </thead>
+//     <tbody className="divide-y divide-gray-200">
+//       {visitors.map((v, i) => (
+//         <tr key={i} className="hover:bg-gray-50">
+//           <td className="px-4 py-2">{i + 1}</td>
+//           <td className="px-4 py-2">{renderCell(v.campaign_id)}</td>
+//           <td className="px-4 py-2">{renderCell(v.campaign_name)}</td>
+//           <td className="px-4 py-2">{renderCell(v.adgroup_id)}</td>
+//           <td className="px-4 py-2">{renderCell(v.adgroup_name)}</td>
+//           <td className="px-4 py-2">{renderCell(v.ad_id)}</td>
+//           <td className="px-4 py-2">{renderCell(v.keyword_text)}</td>
+//           <td className="px-4 py-2">{renderCell(v.keyword_match_type)}</td>
+//           <td className="px-4 py-2">{renderCell(v.placement)}</td>
+//           <td className="px-4 py-2">{renderCell(v.placement_type)}</td>
+//           <td className="px-4 py-2">{renderCell(v.ad_url)}</td>
+//           <td className="px-4 py-2">{renderCell(v.ad_domain)}</td>
+//         </tr>
+//       ))}
+//     </tbody>
+//   </table>
+// );
